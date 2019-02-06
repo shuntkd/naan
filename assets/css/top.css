@@ -1,0 +1,263 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+v2.0 | 20110126
+License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+margin: 0;
+padding: 0;
+border: 0;
+font-size: 100%;
+font: inherit;
+vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+display: block;
+}
+body {
+line-height: 1;
+}
+ol, ul {
+list-style: none;
+}
+blockquote, q {
+quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+content: '';
+content: none;
+}
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+
+
+/* top設定
+   =================================================================== */
+body{
+	font-family: 'Kosugi Maru', sans-serif;
+}
+
+/* top_container設定
+   =================================================================== */
+
+.top_container .logo img {
+    width: 30%;
+    height: auto;
+    margin: auto;
+    display: block;
+}
+
+.top_container .top{
+	position:relative;
+}
+
+.top_container .top img {
+    width: 90%;
+    height: auto;
+    margin: auto;
+    display: block;
+}
+
+
+.search_container{
+  box-sizing: border-box;
+  position: absolute;
+	top:50%;
+	left:35%;
+  border: 3px black solid;
+  padding: 3px 10px;
+  border-radius: 20px;
+  height: 2.3em;
+  width: 260px;
+  overflow: hidden;
+	background:white;
+}
+
+/* search_container設定
+   =================================================================== */
+
+.search_container input[type="text"]{
+  border: none;
+  height: 2.0em;
+}
+.search_container input[type="text"]:focus {
+  outline: 0;
+}
+.search_container input[type="submit"]{
+  cursor: pointer;
+  font-family: FontAwesome;
+  font-size: 1.3em;
+  border: none;
+  background: none;
+  color: #3879D9;
+  position: absolute;
+  width: 2.5em;
+  height: 2.5em;
+  right: 0;
+  top: -10px;
+  outline : none;
+}
+
+.leaf {
+	position:absolute;
+	top:70%;
+	left:80%;
+}
+
+.leaf_concept{
+	position:absolute;
+	top:50%;
+	left:30%;
+}
+
+
+/* shop_list設定
+   =================================================================== */
+
+
+.shop_list_title{
+		margin: 0 auto;
+		display:table;
+		text-align:center;
+		
+}
+
+.shop_list_title li {
+	display: table-cell;
+	vertical-align: middle;
+	margin: 0;
+	
+}
+
+.shop_list_title img {
+	width: 50%;
+}
+
+.shop_list {
+	list-style: none;
+	text-align:center;
+	margin: 0 auto;
+	padding: 0;
+	letter-spacing: -.5em;
+}
+.shop_list li {
+	display: inline-block;
+	width: 25%;
+	padding: 10px;
+	box-sizing: border-box;
+	letter-spacing: 0;
+	vertical-align: top;
+}
+
+.shop_list dt{
+	margin:0;
+}
+
+.shop_list dl{
+	
+}
+
+.shop_list img{
+	width:100%;
+	height: auto;
+}
+
+/* concept 設定
+   =================================================================== */
+
+
+.concept {
+	text-align: center;
+}
+
+
+.concept_title {
+		margin: 0 auto;
+		display:table;
+		text-align:center;
+}
+
+.concept_title li {
+	display: table-cell;
+	vertical-align: middle;
+	margin: 0;
+}
+
+.concept_title img {
+	width: 50%;
+}
+
+.concept_content {
+		margin: 0 auto;
+		display:block;
+		text-align:center;
+		
+}
+
+ul.concept_content {
+	display: table;
+	margin: 0 auto;
+}
+
+.concept_content li {
+	display: table-cell;
+	vertical-align: middle;
+	margin: 0;
+	
+}
+
+.concept_content img {
+	width: 50%;
+}
+
+.square_btn{
+    display: inline-block;
+    padding: 7px 20px;
+	border-radius: 25px;
+    text-decoration: none;
+    color: white;
+		background:green;
+    transition: .4s;
+}
+
+.square_btn:hover {
+    background-image: -webkit-linear-gradient(45deg, #FFC107 0%, #f76a35 100%);
+    background-image: linear-gradient(45deg, #FFC107 0%, #f76a35 100%);
+}
+
+/* footer 設定
+   =================================================================== */
+
+
+.footer_list {
+		width: 80%;
+		margin: 0 auto;
+		display:block;
+		text-align:center;
+}
+
+.footer_list ul li {
+	display: inline;
+}
+
+.footer_list a {
+	color:grey;
+text-decoration: none;
+}
+
