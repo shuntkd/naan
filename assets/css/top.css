@@ -74,6 +74,9 @@ body{
     display: block;
 }
 
+/* search_container設定
+   =================================================================== */
+
 
 .search_container{
   box-sizing: border-box;
@@ -86,11 +89,10 @@ body{
   height: 2.3em;
   width: 260px;
   overflow: hidden;
-	background:white;
+　background:white;
+background-image: url(../img/top/concept_leaf.png);
 }
 
-/* search_container設定
-   =================================================================== */
 
 .search_container input[type="text"]{
   border: none;
@@ -114,16 +116,9 @@ body{
   outline : none;
 }
 
-.leaf {
-	position:absolute;
-	top:70%;
-	left:80%;
-}
 
-.leaf_concept{
-	position:absolute;
-	top:50%;
-	left:30%;
+.xxx {
+	background-image: url(../img/top/concept_leaf.png);
 }
 
 
