@@ -47,11 +47,12 @@ border-spacing: 0;
 }
 
 
-/* top設定
+/* body設定
    =================================================================== */
 body{
 	font-family: 'Kosugi Maru', sans-serif;
 	text-align:center;
+	width: 1920px;
 }
 
 /* hero設定
@@ -59,16 +60,18 @@ body{
 
 .hero {
 	position: relative;
+	margin: auto;
 	background: url(../img/top/top.png) no-repeat;
 	width: 1823.15px;
 	height: 1006.36px;
 }
 
-.hero_field{
+.hero_field {
 	box-sizing: border-box;
   	position: absolute;
 	top:50%;
 	left:50%;
+	transform: translate(-50%,-50%);
 	border: 6px black solid;
 	padding: 3px 10px;
 	border-radius: 45px;
@@ -104,6 +107,51 @@ body{
 	outline : none;
   }
 
+  
+
+/* title 設定
+   =================================================================== */
+
+.title{
+	position: relative;
+	margin: 200px auto;
+	width: 1494.66px;
+	height: 260.67px;
+
+}
+
+.title h2 {
+	padding-top: 30px;
+	font-size: 60px;	
+}
+
+.title p {
+	padding-top: 30px;
+	font-size: 40px;
+}
+
+.title_left{
+	position: absolute;
+	top:0;
+	left:0;
+
+}
+.title_right{
+	position: absolute;
+	top:0;
+	right:0;
+}
+
+/* concept 設定
+   =================================================================== */
+
+.concept h3{
+	font-size:50px;
+}
+.concept p{
+	font-size: 30px;
+}
+
 .hero_concept{
 	position: absolute;
 	background: url(../img/top/concept_leaf.png) no-repeat;
@@ -126,19 +174,58 @@ body{
 .shop_list{
 	display: flex;
 	flex-direction: row;
+	justify-content: space-around;
+}
+
+.shop_list div {
+	position: relative;
+	background: url(../img/top/shop_bk.png) no-repeat;
+	width: 406.78px;
+	height: 127.97px;
+}
+
+.shop_list span {
+	position: absolute;
+	top:50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	font-size: 30px;
+	color: black;
+	text-decoration: none;
 }
 
 /* concept 設定
    =================================================================== */
 
 
-.contents {
+.concept {
 	text-align: center;
+}
+
+.concept p {
+	padding: 170px 0;
+}
+
+.concept .title p{
+	padding-top: 30px;
+}
+
+.concept_content div {
+	width: 620px;
+	margin: 0 90px;
+}
+
+.concept_content--modifier div {
+	width: 620px;
+	margin: 0 90px;
 }
 
 .concept_content {
 	display: flex;
 	flex-direction: row;
+	margin: 100px auto;
+	width: 1410.97px;
+	height: 805.19px;
 }
 
 
@@ -146,22 +233,35 @@ body{
 .concept_content--modifier {
 	display: flex;
 	flex-direction: row-reverse;
+	margin: 100px auto;
+	width: 1410.97px;
+	height: 805.19px;
 }
 
 .btn {
+	position: relative;
     display: inline-block;
-    padding: 7px 20px;
-	border-radius: 25px;
-    text-decoration: none;
-    color: white;
-	background:green;
-    transition: .4s;
+	border-radius: 45px;
+	width: 416px;
+	height: 90px;
+	background: #22b573;
+	text-decoration: none;
+	margin-bottom: 100px;
 }
 
-.btn:hover {
-    background-image: -webkit-linear-gradient(45deg, #FFC107 0%, #f76a35 100%);
-    background-image: linear-gradient(45deg, #FFC107 0%, #f76a35 100%);
+.btn a{
+	position: absolute;
+	font-size: 30px;
+	color: white;
+	text-decoration: none;
+	width: 386px;
+	height: 30px;
+	top:50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
 }
+
+
 
 /* footer 設定
    =================================================================== */
@@ -180,6 +280,6 @@ footer ul li {
 
 footer a {
 	color:grey;
-text-decoration: none;
+	text-decoration: none;
 }
 
