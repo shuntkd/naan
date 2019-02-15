@@ -109,10 +109,10 @@ body{
 
   
 
-/* title 設定
+/* shop_title 設定
    =================================================================== */
 
-.title{
+.shop_title{
 	position: relative;
 	margin: 200px auto;
 	width: 1494.66px;
@@ -120,23 +120,23 @@ body{
 
 }
 
-.title h2 {
+.shop_title h2 {
 	padding-top: 30px;
 	font-size: 60px;	
 }
 
-.title p {
+.shop_title p {
 	padding-top: 30px;
 	font-size: 40px;
 }
 
-.title_left{
+.shop_title_left{
 	position: absolute;
-	top:0;
+	top:-50px;
 	left:0;
 
 }
-.title_right{
+.shop_title_right{
 	position: absolute;
 	top:0;
 	right:0;
@@ -194,6 +194,41 @@ body{
 	text-decoration: none;
 }
 
+/* concept_title 設定
+   =================================================================== */
+
+.concept_title{
+	position: relative;
+	margin: 200px auto;
+	width: 872px;
+	height: 178px;
+
+}
+
+.concept_title h2 {
+	padding-top: 30px;
+	font-size: 60px;	
+}
+
+.concept .concept_title p {
+	padding-top: 30px;
+	font-size: 40px;
+}
+
+.concept_title_left{
+	position: absolute;
+	top:0;
+	left:0;
+
+}
+.concept_title_right{
+	position: absolute;
+	top:0;
+	right:0;
+}
+
+
+
 /* concept 設定
    =================================================================== */
 
@@ -206,9 +241,7 @@ body{
 	padding: 170px 0;
 }
 
-.concept .title p{
-	padding-top: 30px;
-}
+
 
 .concept_content div {
 	width: 620px;
