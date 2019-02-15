@@ -51,187 +51,114 @@ border-spacing: 0;
    =================================================================== */
 body{
 	font-family: 'Kosugi Maru', sans-serif;
+	text-align:center;
 }
 
-/* top_container設定
+/* hero設定
    =================================================================== */
 
-.top_container .logo img {
-    width: 30%;
-    height: auto;
-    margin: auto;
-    display: block;
+.hero {
+	position: relative;
+	background: url(../img/top/top.png) no-repeat;
+	width: 1823.15px;
+	height: 1006.36px;
 }
 
-.top_container .top{
-	position:relative;
-}
-
-.top_container .top img {
-    width: 90%;
-    height: auto;
-    margin: auto;
-    display: block;
-}
-
-/* search_container設定
-   =================================================================== */
-
-
-.search_container{
-  box-sizing: border-box;
-  position: absolute;
+.hero_field{
+	box-sizing: border-box;
+  	position: absolute;
 	top:50%;
-	left:35%;
-  border: 3px black solid;
-  padding: 3px 10px;
-  border-radius: 20px;
-  height: 2.3em;
-  width: 260px;
-  overflow: hidden;
-　background:white;
-background-image: url(../img/top/concept_leaf.png);
+	left:50%;
+	border: 6px black solid;
+	padding: 3px 10px;
+	border-radius: 45px;
+	height: 90px;
+	width: 435.15px;
+	background: white;
 }
 
+.hero_field input[type="text"]{
+	position: absolute;
+	border: none;
+	font-size: 30px;
+	width: 270px;
+	height: 40px;
+	left: 37px;
+	top: 20px;
+  }
+.hero_field input[type="text"]:focus {
+	outline: 0;
+  }
+.hero_field input[type="submit"]{
+	cursor: pointer;
+	font-family: FontAwesome;
+	font-size: 30px;
+	border: none;
+	background: none;
+	color: black;
+	position: absolute;
+	width: 2.5em;
+	height: 2.5em;
+	right: 37px;
+	top: 5px;
+	outline : none;
+  }
 
-.search_container input[type="text"]{
-  border: none;
-  height: 2.0em;
+.hero_concept{
+	position: absolute;
+	background: url(../img/top/concept_leaf.png) no-repeat;
+	width: 291px;
+	height: 291px;
+	top: 80%;
+	left: 85%;
 }
-.search_container input[type="text"]:focus {
-  outline: 0;
+
+.hero_concept a {
+	position: absolute;
+	font-size: 30px;
+	color: white;
+	top: 50%;
+	left: 25%;
 }
-.search_container input[type="submit"]{
-  cursor: pointer;
-  font-family: FontAwesome;
-  font-size: 1.3em;
-  border: none;
-  background: none;
-  color: #3879D9;
-  position: absolute;
-  width: 2.5em;
-  height: 2.5em;
-  right: 0;
-  top: -10px;
-  outline : none;
-}
-
-
-.xxx {
-	background-image: url(../img/top/concept_leaf.png);
-}
-
-
 /* shop_list設定
    =================================================================== */
 
-
-.shop_list_title{
-		margin: 0 auto;
-		display:table;
-		text-align:center;
-		
-}
-
-.shop_list_title li {
-	display: table-cell;
-	vertical-align: middle;
-	margin: 0;
-	
-}
-
-.shop_list_title img {
-	width: 50%;
-}
-
-.shop_list {
-	list-style: none;
-	text-align:center;
-	margin: 0 auto;
-	padding: 0;
-	letter-spacing: -.5em;
-}
-.shop_list li {
-	display: inline-block;
-	width: 25%;
-	padding: 10px;
-	box-sizing: border-box;
-	letter-spacing: 0;
-	vertical-align: top;
-}
-
-.shop_list dt{
-	margin:0;
-}
-
-.shop_list dl{
-	
-}
-
-.shop_list img{
-	width:100%;
-	height: auto;
+.shop_list{
+	display: flex;
+	flex-direction: row;
 }
 
 /* concept 設定
    =================================================================== */
 
 
-.concept {
+.contents {
 	text-align: center;
 }
 
-
-.concept_title {
-		margin: 0 auto;
-		display:table;
-		text-align:center;
-}
-
-.concept_title li {
-	display: table-cell;
-	vertical-align: middle;
-	margin: 0;
-}
-
-.concept_title img {
-	width: 50%;
-}
-
 .concept_content {
-		margin: 0 auto;
-		display:block;
-		text-align:center;
-		
+	display: flex;
+	flex-direction: row;
 }
 
-ul.concept_content {
-	display: table;
-	margin: 0 auto;
+
+
+.concept_content--modifier {
+	display: flex;
+	flex-direction: row-reverse;
 }
 
-.concept_content li {
-	display: table-cell;
-	vertical-align: middle;
-	margin: 0;
-	
-}
-
-.concept_content img {
-	width: 50%;
-}
-
-.square_btn{
+.btn {
     display: inline-block;
     padding: 7px 20px;
 	border-radius: 25px;
     text-decoration: none;
     color: white;
-		background:green;
+	background:green;
     transition: .4s;
 }
 
-.square_btn:hover {
+.btn:hover {
     background-image: -webkit-linear-gradient(45deg, #FFC107 0%, #f76a35 100%);
     background-image: linear-gradient(45deg, #FFC107 0%, #f76a35 100%);
 }
@@ -240,18 +167,18 @@ ul.concept_content {
    =================================================================== */
 
 
-.footer_list {
+footer {
 		width: 80%;
 		margin: 0 auto;
 		display:block;
-		text-align:center;
+		
 }
 
-.footer_list ul li {
+footer ul li {
 	display: inline;
 }
 
-.footer_list a {
+footer a {
 	color:grey;
 text-decoration: none;
 }
