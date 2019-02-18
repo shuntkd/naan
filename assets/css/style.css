@@ -66,7 +66,7 @@ body{
 	height: 1006.36px;
 }
 
-.hero_field {
+.hero__field {
 	box-sizing: border-box;
   	position: absolute;
 	top:50%;
@@ -80,7 +80,7 @@ body{
 	background: white;
 }
 
-.hero_field input[type="text"]{
+.hero__field input[type="text"]{
 	position: absolute;
 	border: none;
 	font-size: 30px;
@@ -89,10 +89,10 @@ body{
 	left: 37px;
 	top: 20px;
   }
-.hero_field input[type="text"]:focus {
+.hero__field input[type="text"]:focus {
 	outline: 0;
   }
-.hero_field input[type="submit"]{
+.hero__field input[type="submit"]{
 	cursor: pointer;
 	font-family: FontAwesome;
 	font-size: 30px;
@@ -109,40 +109,37 @@ body{
 
   
 
-/* shop_title 設定
+/* title 設定
    =================================================================== */
 
-.shop_title{
+.title{
 	position: relative;
 	margin: 200px auto;
-	width: 1494.66px;
-	height: 260.67px;
-
 }
 
-.shop_title h2 {
+.title h2 {
 	padding-top: 30px;
 	font-size: 60px;	
 }
 
-.shop_title p {
+.title p {
 	padding-top: 30px;
 	font-size: 40px;
 }
 
-.shop_title_left{
+.title .left{
 	position: absolute;
 	top:-50px;
 	left:0;
 
 }
-.shop_title_right{
+.title .right{
 	position: absolute;
 	top:0;
 	right:0;
 }
 
-/* concept 設定
+/* hero__concept 設定
    =================================================================== */
 
 .concept h3{
@@ -152,7 +149,7 @@ body{
 	font-size: 30px;
 }
 
-.hero_concept{
+.hero__concept{
 	position: absolute;
 	background: url(../img/top/concept_leaf.png) no-repeat;
 	width: 291px;
@@ -161,30 +158,30 @@ body{
 	left: 85%;
 }
 
-.hero_concept a {
+.hero__concept a {
 	position: absolute;
 	font-size: 30px;
 	color: white;
 	top: 50%;
 	left: 25%;
 }
-/* shop_list設定
+/* shop__list設定
    =================================================================== */
 
-.shop_list{
+.shop__list{
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
 }
 
-.shop_list div {
+.shop__list div {
 	position: relative;
 	background: url(../img/top/shop_bk.png) no-repeat;
 	width: 406.78px;
 	height: 127.97px;
 }
 
-.shop_list span {
+.shop__list span {
 	position: absolute;
 	top:50%;
 	left: 50%;
@@ -194,38 +191,6 @@ body{
 	text-decoration: none;
 }
 
-/* concept_title 設定
-   =================================================================== */
-
-.concept_title{
-	position: relative;
-	margin: 200px auto;
-	width: 872px;
-	height: 178px;
-
-}
-
-.concept_title h2 {
-	padding-top: 30px;
-	font-size: 60px;	
-}
-
-.concept .concept_title p {
-	padding-top: 30px;
-	font-size: 40px;
-}
-
-.concept_title_left{
-	position: absolute;
-	top:0;
-	left:0;
-
-}
-.concept_title_right{
-	position: absolute;
-	top:0;
-	right:0;
-}
 
 
 
@@ -237,23 +202,27 @@ body{
 	text-align: center;
 }
 
-.concept p {
+.concept__content p {
+	padding: 170px 0;
+}
+
+.concept__content_reverce {
 	padding: 170px 0;
 }
 
 
 
-.concept_content div {
+.concept__content div {
 	width: 620px;
 	margin: 0 90px;
 }
 
-.concept_content--modifier div {
+.concept__content_reverce div {
 	width: 620px;
 	margin: 0 90px;
 }
 
-.concept_content {
+.concept__content {
 	display: flex;
 	flex-direction: row;
 	margin: 100px auto;
@@ -263,7 +232,7 @@ body{
 
 
 
-.concept_content--modifier {
+.concept__content--modifier {
 	display: flex;
 	flex-direction: row-reverse;
 	margin: 100px auto;
