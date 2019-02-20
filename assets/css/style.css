@@ -125,10 +125,12 @@ body{
 	position: absolute;
 	background: url(../img/top/concept_leaf.png) no-repeat;
 	background-size: contain;
-	width: 30%;
-	height: 30%;
+	background-position: center center;
+	width: 20vw;
+	height: 20vw;
+	max-width: 291px;
 	top: 75%;
-	left: 85%;
+	left: 80%;
 }
 
 .hero__concept p {
@@ -136,7 +138,8 @@ body{
 	font-size: 12px;
 	color: white;
 	top: 50%;
-	left: 20%;
+	left: 50%;
+	transform: translate(-50%,-50%);
 }
 
 /* title 設定
