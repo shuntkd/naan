@@ -7,7 +7,7 @@
 		 url(../fonts/komorebi-gothic-P.woff) format('woff');
   }
 
-   body{	
+body{	
 	font-family: myFont,'Kosugi Maru', sans-serif;
 }
 
@@ -20,7 +20,6 @@ p{
 	line-height: 1.7;
 }
 
-
 .commom_container{
 	max-width: 1440px;
 	width: 100%;
@@ -28,8 +27,6 @@ p{
 	text-align: center;
 	color: #707070;
 }
-
-
 
 /* hero設定
    =================================================================== */
@@ -47,7 +44,7 @@ p{
 form {
 	box-sizing: border-box;
   	position: absolute;
-	top:50%;
+	top:25%;
 	left:50%;
 	transform: translate(-50%,-50%);
 	border: 3px #000000 solid;
@@ -151,8 +148,6 @@ form input[type="submit"]{
 
 /* ShopList設定
    =================================================================== */
-
-
 
 .ShopList{
 	display: flex;
@@ -276,8 +271,6 @@ form input[type="submit"]{
 	line-height: 1.7;
 }
 
-
-
 .ShopList > li {
 	width: 30%;
   }
@@ -286,6 +279,98 @@ form input[type="submit"]{
 	  height: 50%;
   }
 
+/* SearchWord 設定
+   =================================================================== */
+
+.SearchWord{
+	display: flex;
+	position: absolute;
+	top:23%;
+	left:10%;
+	transform: translate(-23%,-10%);
+	justify-content: flex-start;
+}
+
+.SearchWord li{
+	position: relative;
+	width: 100px;
+	height: 36px;
+	border-radius: 18px;
+	background: #D6D6D6;
+	text-decoration: none;
+	font-size: 14px;
+	margin-right: 5px;
+}
+
+.SearchWord li p{
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+}
+
+/* ShopList--modifier設定
+   =================================================================== */
+
+.ShopList--modifier{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	text-align: center;
+	margin:  125px auto;
+	width: 100%;
+	padding-inline-start: 0;
+}
+
+.ShopList--modifier a {
+	text-decoration: none;
+	color: #707070;
+}
+
+.ShopList--modifier a:hover {
+	text-decoration: none;
+	color: #A3A3A3;
+}
+
+.ShopList--modifier p{
+	font-size: 16px;
+}
+
+.ShopList--modifier .ShopImg img{
+	position: absolute;
+	display: block;
+	height: 92%;
+	width: 92%;
+	top: 4%;
+	left: 4%;
+	-webkit-mask-image: url(../img/result/result_mask.png);
+	-webkit-mask-size:contain;	
+	-webkit-mask-position: center;
+	mask-image: url(../img/result/result_mask.png);
+	mask-size: contain;
+	mask-position: center;
+	-webkit-mask-repeat: no-repeat;
+	mask-repeat: no-repeat;
+}
+
+.ShopList--modifier div.ShopImg{
+	position: relative;
+	width: 100%;
+	height: 220px;
+	background-image: url(../img/result/result_mask_pass.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	z-index: 10;	
+}
+
+.ShopList--modifier > li {
+	width: 50%;
+  }
+
+  .ShopList--modifier li > div {
+	  height: 50%;
+  }
 
 /* ConceptContent 設定
    =================================================================== */
@@ -406,7 +491,7 @@ footer {
 		width: 80%;
 		margin: 0 auto;
 		display:block;
-		color: #707070;		
+		z-index: 10;
 }
 
 footer ul li {
