@@ -1,34 +1,43 @@
 
-/* body設定
+/* 基本設定
    =================================================================== */
 body{
 	font-family: 'Kosugi Maru', sans-serif;
 }
 
-/* responsive設定
-   =================================================================== */
-.responsive{
+h3 {
+	font-size: 20px;
+}
+
+p{
+	line-height: 1.7;
+}
+
+
+.commom_container{
 	max-width: 1440px;
 	width: 100%;
 	margin: 0 auto;
+	text-align: center;
+	color: #707070;
 }
+
+
 
 /* hero設定
    =================================================================== */
 
-.hero {
+#hero {
 	position: relative;
 	margin: auto;
 	background-image: url(../img/top/top.png);
 	background-repeat: no-repeat;
-	background-size: contain;
+	background-size: cover;
 	background-position: center center;
-	height: 0;
-	/* (height/width)*100 */ 
-	padding-top: 55%;
+	height: 750px;
 }
 
-.hero__field {
+form {
 	box-sizing: border-box;
   	position: absolute;
 	top:50%;
@@ -36,89 +45,96 @@ body{
 	transform: translate(-50%,-50%);
 	border: 3px #000000 solid;
 	padding: 3px 10px;
-	border-radius: 26px;
-	height: 52px;
-	width: 170px;
+	border-radius: 36px;
+	height: 71px;
+	width: 300px;
 	background: #FFFFFF;
+	text-align: left;
 }
 
-.hero__field input[type="text"]{
-	position: absolute;
+form input[type="text"]{
+	position:absolute;
 	border: none;
 	font-size: 20px;
-	height: 36px;
-	width: 130px;
-	padding: 20px 10px;
+	height: 1em;
+	width: 250px;
+	top:22px;
+	left: 40px;
   }
-.hero__field input[type="text"]:focus {
+  
+form input[type="text"]:focus {
 	outline: 0;
   }
-.hero__field input[type="submit"]{
+form input[type="submit"]{
 	cursor: pointer;
 	font-family: FontAwesome;
-	font-size: 20px;
+	font-size: 24px;
 	border: none;
 	background: none;
 	color: #000000;
 	position: absolute;
-	width: 2.5em;
-	height: 2.5em;
-	top: -1px;
-	right: 0;
+	width: 2em;
+	height: 2em;
+	top: 9px;
+	right: 28px;
 	outline : none;
   }
 
-/* hero__concept 設定
+/* HeroConcept 設定
    =================================================================== */
 
-.hero__concept{
+.HeroConcept{
 	position: absolute;
 	background: url(../img/top/concept_leaf.png) no-repeat;
 	background-size: contain;
 	background-position: center center;
-	width: 20vw;
-	height: 20vw;
-	max-width: 291px;
-	top: 75%;
-	left: 80%;
+	width: 220px;
+	height: 150px;
+	bottom: 0;
+	right: 0;
 }
 
-.hero__concept p {
+.HeroConcept:hover{
+	background: url(../img/top/concept_leaf_hover.png) no-repeat;
+	background-size: contain;
+	background-position: center center;
+}
+
+.HeroConcept p {
 	position: absolute;
-	font-size: 16px;
+	font-size: 20px;
 	color: #FFFFFF;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%,-50%);
+	top: 66px;
+	right: 50px;
 }
 
-/* title 設定
+/* content block 設定
    =================================================================== */
 
-   .title{
+.content__title{
 	position: relative;
 	margin: 50px auto;
 	width: 60%;
 }
 
-.title > h2 {
+.content__title > h2 {
 	padding-top: 10px;
 	font-size: 26px;	
 }
 
-.title > p {
+.content__title > p {
 	padding-top: 10px;
 	font-size: 16px;
 }
 
-.title .left{
+.content__title .left{
 	position: absolute;
 	top: 0;
 	left:0;
 	height: 100%;
 
 }
-.title .right{
+.content__title .right{
 	position: absolute;
 	top:0;
 	right:0;
@@ -126,170 +142,252 @@ body{
 }
 
 
-/* shop__list設定
+/* ShopList設定
    =================================================================== */
 
-.shop {
-	text-align: center;
-	color: #707070;
-}
 
-.shop__list{
+
+.ShopList{
 	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+	text-align: center;
 	margin: auto;
-	justify-content: space-around;
 	width: 80%;
 }
 
-.shop__list div.cloud{
+.ShopList div.ShopName{
 	position: relative;
 	background: url(../img/top/shop_bk.png) no-repeat;
 	background-size: contain;
-	height: 15%;
+	height: 150px;
+	width: 100%;
+	top: -25px;
 }
 
-.shop__list div.photo{
+.ShopList div.ShopName:hover{
+	position: relative;
+	background: url(../img/top/shop_bk_hover.png) no-repeat;
+	background-size: contain;
+	height: 150px;
+	width: 100%;
+	top: -25px;
+}
+
+.ShopList .left img{
+	position: absolute;
+	display: block;
+	height: 92%;
+	width: 92%;
+	top: 4%;
+	left: 4%;
+	-webkit-mask-image: url(../img/top/mask_left.png);
+	-webkit-mask-size:contain;	
+	-webkit-mask-position: center;
+	mask-image: url(../img/top/mask_left.png);
+	mask-size: contain;
+	mask-position: center;
+	-webkit-mask-repeat: no-repeat;
+	mask-repeat: no-repeat;
+}
+
+.ShopList div.left{
 	position: relative;
 	width: 100%;
-	height: 0;
-	padding-top: 136%;
+	height: 50%;
+	background-image: url(../img/top/mask_left_pass.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	z-index: 10;	
 }
 
-.shop__list p {
+.ShopList .center img{
 	position: absolute;
-	top:30%;
-	left: 50%;
-	transform: translate(-50%,-50%);
-	font-size: 10px;
+	display: block;
+	height: 92%;
+	width: 92%;
+	top: 4%;
+	left: 4%;
+	-webkit-mask-image: url(../img/top/mask_center.png);
+	-webkit-mask-size:contain;	
+	-webkit-mask-position: center;
+	mask-image: url(../img/top/mask_center.png);
+	mask-size: contain;
+	mask-position: center;
+	-webkit-mask-repeat: no-repeat;
+	mask-repeat: no-repeat;
+}
+
+.ShopList div.center{
+	position: relative;
+	width: 100%;
+	height: 50%;
+	background-image: url(../img/top/mask_center_pass.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	z-index: 10;	
+}
+
+.ShopList .right img{
+	position: absolute;
+	display: block;
+	height: 92%;
+	width: 92%;
+	top: 4%;
+	left: 3%;
+	-webkit-mask-image: url(../img/top/mask_right.png);
+	-webkit-mask-size:contain;	
+	-webkit-mask-position: center;
+	mask-image: url(../img/top/mask_right.png);
+	mask-size: contain;
+	mask-position: center;
+	-webkit-mask-repeat: no-repeat;
+	mask-repeat: no-repeat;
+}
+
+.ShopList div.right{
+	position: relative;
+	width: 100%;
+	height: 50%;
+	background-image: url(../img/top/mask_right_pass.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	z-index: 10;	
+}
+
+.ShopList p {
+	position: absolute;
+	width: 100%;
+	top:30px;
+	text-align: center;
+	font-size: 14px;
 	text-decoration: none;
 	color: #707070;
+	line-height: 1.7;
 }
 
-.shop__list > li {
-	width: calc(80% / 3);
-	flex-direction: column;
-	justify-content: space-between;
+
+
+.ShopList > li {
+	width: 30%;
   }
 
-  .shop__list li > div {
+  .ShopList li > div {
 	  height: 50%;
   }
 
-.shop__list img {
-	position: absolute;
-	width: 100%;
-	top:0;
-	left:0;
-}
 
-/* concept 設定
+/* ConceptContent 設定
    =================================================================== */
 
 
-.concept {
-	text-align: center;
-	margin: 0 auto;
-	width: 100%;
-	color: #707070;
-}
-
-.concept h3 {
-	font-size: 20px;
-}
-
-.concept h3:first-letter {
+.ConceptContent h3:first-letter {
 	font-size: 62px;
 }
 
-.concept__content {
+.ConceptContent_reverce h3:first-letter {
+	font-size: 62px;
+}
+
+.ConceptContent {
 	display: flex;
+	justify-content: space-between;
 	margin: 100px auto;
 	width: 80%;
 }
 
-.concept__content img {
+.ConceptContent img {
 	width: 65%;
 }
 
-.concept__content div {
+.ConceptContent div {
 	position: relative;
 	width: 100%;
-	justify-content: space-between;
+
 }
 
-.concept__content div > img.sub{
+.ConceptContent div > img.sub{
 	position: absolute;
 	width: 30%;
 	left: 20%;
 	bottom: 0%;
 }
 
-.concept__content div > img.sub_2{
+.ConceptContent div > img.sub_2{
 	position: absolute;
 	width: 50%;
 	left: 20%;
 	bottom: 0%;
 }
 
-.concept__content div > p{
+.ConceptContent div > p{
 	position: absolute;
 	width: 40%;
 	top: 30%;
 	left: 35%;
 	font-size: 14px;
 	text-align: left;
+	line-height: 1.7;
 }
 
-.concept__content_reverce {
+.ConceptContent_reverce {
 	display: flex;
+	justify-content: space-between;
 	flex-direction: row-reverse;
 	margin: 100px auto;
 	width: 80%;
 }
 
-.concept__content_reverce img {
+.ConceptContent_reverce img {
 	width: 65%;
 }
 
-.concept__content_reverce div {
+.ConceptContent_reverce div {
 	position: relative;
 	width: 100%;
-	justify-content: space-between;
+
 }
 
-.concept__content_reverce div > img.sub{
+.ConceptContent_reverce div > img.sub{
 	position: absolute;
 	width: 30%;
 	right: 20%;
 	bottom: 0%;
 }
 
-.concept__content_reverce div > p{
+.ConceptContent_reverce div > p{
 	position: absolute;
 	width: 40%;
 	top: 30%;
 	left: 35%;
 	font-size: 14px;
 	text-align: left;
+	line-height: 1.7;
 }
 
 .btn {
 	position: relative;
     display: inline-block;
-	width: 280px;
-	border-radius: 30px;
-	margin: 30px auto;
+	width: 330px;
+	border-radius: 64px;
+	margin: 30px auto 90px auto;
 	background: #22b573;
 	text-decoration: none;
 }
 
+.btn:hover{
+	background-color: #2BC781;
+}
+
 .btn a{
 	display: block;
-	font-size: 18px;
-	padding: 18px 3px;
+	font-size: 20px;
+	padding: 22px 3px 20px 6px;
 	color: #FFFFFF;
 	text-decoration: none;
-	text-align: center;
 	width: 100%;
 }
 
@@ -301,7 +399,6 @@ footer {
 		width: 80%;
 		margin: 0 auto;
 		display:block;
-		text-align: center;
 		color: #707070;		
 }
 
@@ -312,5 +409,10 @@ footer ul li {
 footer a {
 	text-decoration: none;
 	color: #707070;
+}
+
+footer a:hover{
+	text-decoration: none;
+	color: #A3A3A3;
 }
 

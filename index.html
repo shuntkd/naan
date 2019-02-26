@@ -5,50 +5,70 @@
 		<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Kosugi+Maru" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="assets/css/style.css" media="screen,print" />
+		<!-- jQuery.jsの読み込み -->
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+
+		<!-- スムーズスクロール部分の記述 -->
+		<script>
+			$(function(){
+			// #で始まるアンカーをクリックした場合に処理
+				$('a[href^=#]').click(function() {
+					// スクロールの速度
+					var speed = 400; // ミリ秒
+					// アンカーの値取得
+					var href= $(this).attr("href");
+					// 移動先を取得
+					var target = $(href == "#" || href == "" ? 'html' : href);
+					// 移動先を数値で取得
+					var position = target.offset().top;
+					// スムーススクロール
+					$('body,html').animate({scrollTop:position}, speed, 'swing');
+					return false;
+				});
+			});
+		</script>
 	</head>
 	<body>
-		<div class="responsive">
+		<div class="commom_container">
 			<header></header>
 
-			<div class="hero">
-				<div class="hero__field">
+			<div id="hero">
+				<div>
 					<form method="get" action="#">
-						<input type="text" placeholder="地域を入力">
+						<input type="text" placeholder="地域を入力して検索">
 						<input type="submit" value="&#xf002">
 					</form>
 				</div>
-					<a href="">
-						<div class="hero__concept">
+					<a href="#concept" class="HeroConcept">
 							<p>コンセプト</p>
-						</div>
 					</a>
 			</div>
 
 			
 
-			<div class="contents">
+			<div class="contents_container">
 
-				<section class="shop">
-					<div class="title">
+				<section class="content">
+					<div class="content__title">
 						<h2>ナン好きがよく行くお店</h2>
 						<p>どこに行けば良いかわからない人にオススメ</p>
 						<img src="assets/img/top/shop_1.png" alt="image" class="left"/>
 						<img src="assets/img/top/shop_2.png" alt="image" class="right"/>
 					</div>
 						
-					<ul class="shop__list">
+					<ul class="ShopList">
 						<li>
 							<a href="">
-								<div class="photo"><img src="assets/img/top/shoplist_1.png" alt="image"></div>
-								<div class="cloud">
+								<div class="left"><img src="assets/img/top/left.jpg" alt="image"></div>
+								<div class="ShopName">
 										<p>インダス<br>名古屋市</p>
 								</div>
 							</a>
 						</li>
 						<li>
 							<a href="">
-								<div class="photo"><img src="assets/img/top/shoplist_2.png" alt="image"/></div>
-								<div class="cloud">
+								<div class="center"><img src="assets/img/top/center.jpg" alt="image"/></div>
+								<div class="ShopName">
 										<p>アンジェリ<br>大田区</p>	
 								</div>
 							</a>
@@ -56,8 +76,8 @@
 
 						<li>
 							<a href="">	
-								<div class="photo"><img src="assets/img/top/shoplist_3.png" alt="image"/></div>
-								<div class="cloud">
+								<div class="right"><img src="assets/img/top/right.jpg" alt="image"/></div>
+								<div class="ShopName">
 										<p>アーリー</br>横浜市</p>
 								</div>
 							</a>
@@ -66,16 +86,16 @@
 				</section>
 
 
-				<section class="concept">
+				<section class="content">
 					
-					<div class="title">
-						<h2>コンセプト</h2>
+					<div class="content__title">
+						<a id="concept"><h2>コンセプト</h2></a>
 						<p>こんな方のためのサービスです</p>
 						<img src="assets/img/top/concept_1.png" alt="image" class="left"/>
 						<img src="assets/img/top/concept_2.png" alt="image" class="right"/>
 					</div>
 						
-					<div class="concept__content">
+					<div class="ConceptContent">
 						<div>
 							<h3>1 なんか辛そう</h3>
 							<p>辛さを調節できる店舗がほとんどです。ぜひ勇気を出して行ってみてください</p>
@@ -86,7 +106,7 @@
 						</div>
 					</div>
 
-					<div class="concept__content_reverce">
+					<div class="ConceptContent_reverce">
 						<div>
 							<h3>2 ちょっと入りづらい</h3>
 							<p>私も最初はそうでした。一度行ってみれば気にならなくなりますし、意外とたくさん人が来ていることに驚くと思います。それだけで行かないなんてもったいない！！</p>
@@ -97,7 +117,7 @@
 						</div>
 					</div>
 
-					<div class="concept__content">
+					<div class="ConceptContent">
 						<div>
 							<h3>3 どこに行けばいいの</h3>
 							<p>そんな方の背中を押すために、このサービスを作りました。意外とたくさんお店があるので、近くのお店に行ってみてくださいね。</p>													
@@ -113,7 +133,7 @@
 					そんな想いから作ったサービスです。
 					</p>
 					<div class="btn">
-						<a href="#" class="square_btn">近くのお店をさがしてみる</a>
+						<a href="#hero" class="square_btn">近くのお店をさがしてみる</a>
 					</div>			
 				</section>
 
