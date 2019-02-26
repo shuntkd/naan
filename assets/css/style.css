@@ -201,7 +201,7 @@ form input[type="submit"]{
 .ShopList div.left{
 	position: relative;
 	width: 100%;
-	height: 50%;
+	height: 320px;
 	background-image: url(../img/top/mask_left_pass.png);
 	background-size: contain;
 	background-repeat: no-repeat;
@@ -229,7 +229,7 @@ form input[type="submit"]{
 .ShopList div.center{
 	position: relative;
 	width: 100%;
-	height: 50%;
+	height: 300px;
 	background-image: url(../img/top/mask_center_pass.png);
 	background-size: contain;
 	background-repeat: no-repeat;
@@ -257,7 +257,7 @@ form input[type="submit"]{
 .ShopList div.right{
 	position: relative;
 	width: 100%;
-	height: 50%;
+	height: 300px;
 	background-image: url(../img/top/mask_right_pass.png);
 	background-size: contain;
 	background-repeat: no-repeat;
@@ -268,7 +268,7 @@ form input[type="submit"]{
 .ShopList p {
 	position: absolute;
 	width: 100%;
-	top:30px;
+	top:15px;
 	text-align: center;
 	font-size: 14px;
 	text-decoration: none;
