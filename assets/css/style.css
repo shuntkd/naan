@@ -328,8 +328,6 @@ form input[type="submit"]{
 	position: absolute;
 	top:50%;
 	left:10%;
-	transform: translate(-23%,-10%);
-	justify-content: flex-start;
 }
 
 .SearchWord li{
@@ -356,7 +354,7 @@ form input[type="submit"]{
 	justify-content: space-between;
 	text-align: center;
 	margin:  0 auto 125px auto;
-	width: 95%;
+	width: 89%;
 	padding-inline-start: 0;
 }
 
@@ -386,6 +384,7 @@ form input[type="submit"]{
 	-webkit-mask-repeat: no-repeat;
 	mask-repeat: no-repeat;
 	margin: 4%;
+	object-fit: contain;
 }
 
 .ShopList--modifier div.ShopImg{
@@ -399,7 +398,7 @@ form input[type="submit"]{
 }
 
 .ShopList--modifier > li {
-	width: 49%;
+	width: 29%;
   }
 
 
