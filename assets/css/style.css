@@ -119,7 +119,7 @@ form input[type="submit"]{
 /* HeroConcept 設定
    =================================================================== */
 
-.HeroConcept{
+.heroConcept{
 	position: absolute;
 	background: url(../img/top/concept_leaf.png) no-repeat;
 	background-size: contain;
@@ -130,13 +130,13 @@ form input[type="submit"]{
 	right: 0;
 }
 
-.HeroConcept:hover{
+.heroConcept:hover{
 	background: url(../img/top/concept_leaf_hover.png) no-repeat;
 	background-size: contain;
 	background-position: center center;
 }
 
-.HeroConcept p {
+.heroConcept p {
 	position: absolute;
 	font-size: 20px;
 	color: #FFFFFF;
@@ -179,10 +179,41 @@ form input[type="submit"]{
 }
 
 
-/* ShopList設定
+/* content__title--small block 設定
    =================================================================== */
 
-.ShopList{
+	 .content__title--small{
+		position: relative;
+		margin: 10px auto;
+		width: 50%;
+		text-align: center;
+	}
+	
+	.content__title--small > h3 {
+		padding-top: 10px;
+		font-size: 20px;	
+	}
+	
+	
+	.content__title--small .left{
+		position: absolute;
+		top: 0;
+		left:0;
+		height: 100%;
+	
+	}
+	.content__title--small .right{
+		position: absolute;
+		top:0;
+		right:0;
+		height: 100%;
+	}
+
+
+/* shopList設定
+   =================================================================== */
+
+.shopList{
 	display: flex;
 	align-items: flex-end;
 	justify-content: space-between;
@@ -191,7 +222,7 @@ form input[type="submit"]{
 	width: 80%;
 }
 
-.ShopList div.ShopName{
+.shopList div.shopName{
 	position: relative;
 	background: url(../img/top/shop_bk.png) no-repeat;
 	background-size: contain;
@@ -199,7 +230,7 @@ form input[type="submit"]{
 	width: 100%;
 }
 
-.ShopList div.ShopName:hover{
+.shopList div.shopName:hover{
 	position: relative;
 	background: url(../img/top/shop_bk_hover.png) no-repeat;
 	background-size: contain;
@@ -207,7 +238,7 @@ form input[type="submit"]{
 	width: 100%;
 }
 
-.ShopList .left img{
+.shopList .left img{
 	position: absolute;
 	display: block;
 	height: 92%;
@@ -224,7 +255,7 @@ form input[type="submit"]{
 	mask-repeat: no-repeat;
 }
 
-.ShopList div.left{
+.shopList div.left{
 	position: relative;
 	width: 100%;
 	height: 320px;
@@ -235,7 +266,7 @@ form input[type="submit"]{
 	z-index: 10;	
 }
 
-.ShopList .center img{
+.shopList .center img{
 	position: absolute;
 	display: block;
 	height: 92%;
@@ -252,7 +283,7 @@ form input[type="submit"]{
 	mask-repeat: no-repeat;
 }
 
-.ShopList div.center{
+.shopList div.center{
 	position: relative;
 	width: 100%;
 	height: 300px;
@@ -263,7 +294,7 @@ form input[type="submit"]{
 	z-index: 10;	
 }
 
-.ShopList .right img{
+.shopList .right img{
 	position: absolute;
 	display: block;
 	height: 92%;
@@ -280,7 +311,7 @@ form input[type="submit"]{
 	mask-repeat: no-repeat;
 }
 
-.ShopList div.right{
+.shopList div.right{
 	position: relative;
 	width: 100%;
 	height: 300px;
@@ -291,7 +322,7 @@ form input[type="submit"]{
 	z-index: 10;	
 }
 
-.ShopList p {
+.shopList p {
 	position: absolute;
 	width: 100%;
 	top:15px;
@@ -302,11 +333,11 @@ form input[type="submit"]{
 	line-height: 1.7;
 }
 
-.ShopList > li {
+.shopList > li {
 	width: 30%;
   }
 
-  .ShopList li > div {
+  .shopList li > div {
 	  height: 50%;
   }
 
@@ -320,17 +351,17 @@ form input[type="submit"]{
 	margin-bottom: 10px;
 }
 
-/* SearchWord 設定
+/* searchWord 設定
    =================================================================== */
 
-.SearchWord{
+.searchWord{
 	display: flex;
 	position: absolute;
 	top:50%;
-	left:10%;
+	left:3%;
 }
 
-.SearchWord li{
+.searchWord li{
 	position: relative;
 	height: 42px;
 	border-radius: 21px;
@@ -338,41 +369,41 @@ form input[type="submit"]{
 	margin-right: 5px;
 }
 
-.SearchWord li p{
+.searchWord li p{
 	width: 100%;
 	font-size: 14px;
 	text-decoration: none;
 	padding: 12px 16px;
 }
 
-/* ShopList--modifier設定
+/* thumbnail設定
    =================================================================== */
 
-.ShopList--modifier{
+.thumbnail{
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
 	text-align: center;
-	margin:  0 auto 125px auto;
+	margin:  75px auto;
 	width: 89%;
 	padding-inline-start: 0;
 }
 
-.ShopList--modifier a {
+.thumbnail a {
 	text-decoration: none;
 	color: #707070;
 }
 
-.ShopList--modifier a:hover {
+.thumbnail a:hover {
 	text-decoration: none;
 	color: #A3A3A3;
 }
 
-.ShopList--modifier p{
+.thumbnail p{
 	font-size: 16px;
 }
 
-.ShopList--modifier .ShopImg img{
+.thumbnail .shopImg img{
 
 	width: 92%;
 	-webkit-mask-image: url(../img/result/result_mask.png);
@@ -387,7 +418,7 @@ form input[type="submit"]{
 	object-fit: contain;
 }
 
-.ShopList--modifier div.ShopImg{
+.thumbnail div.shopImg{
 	width: 100%;
 	background-image: url(../img/result/result_mask_pass.png);
 	background-size: contain;
@@ -397,68 +428,140 @@ form input[type="submit"]{
 
 }
 
-.ShopList--modifier > li {
+.thumbnail > li {
 	width: 29%;
   }
 
+/* shopContents設定
+   =================================================================== */
 
-/* ConceptContent 設定
+	 .shopContents{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		text-align: left;
+		margin:  75px auto;
+		width: 89%;
+		padding-inline-start: 0;
+	}
+	
+	.shopContents a {
+		text-decoration: none;
+		color: #707070;
+	}
+	
+	.shopContents a:hover {
+		text-decoration: none;
+		color: #A3A3A3;
+	}
+	
+	.shopContents h3{
+		font-size: 24px;
+		padding-left: 30px;
+	}
+	
+	.shopContents .shopProfile .shopName > p{
+		font-size: 16px;
+		text-align: left;
+		padding-left: 30px;
+	}
+
+	.shopProfile{
+		display: flex;
+
+	}
+
+	.shopProfile > div{
+		width: 50%;
+	}
+	
+	.shopContents .shopImg img{
+	
+		width: 92%;
+		-webkit-mask-image: url(../img/result/result_mask.png);
+		-webkit-mask-size:contain;	
+		-webkit-mask-position: center;
+		mask-image: url(../img/result/result_mask.png);
+		mask-size: contain;
+		mask-position: center;
+		-webkit-mask-repeat: no-repeat;
+		mask-repeat: no-repeat;
+		margin: 4%;
+		object-fit: contain;
+	}
+	
+	.shopContents div.shopImg{
+		width: 100%;
+		background-image: url(../img/result/result_mask_pass.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+		z-index: 10;
+	
+	}
+	
+	.shopContents > div {
+		width: 49%;
+		}
+	
+
+/* conceptContent 設定
    =================================================================== */
 .content {
 	text-align: center;
 }
 
-.ConceptContent h3:first-letter {
+.conceptContent h3:first-letter {
 	font-size: 62px;
 }
 
-.ConceptContent_reverce h3:first-letter {
+.conceptContent_reverce h3:first-letter {
 	font-size: 62px;
 }
 
-.ConceptContent {
+.conceptContent {
 	display: flex;
 	justify-content: space-between;
 	margin: 100px auto;
 	width: 80%;
 }
 
-.ConceptContent img {
+.conceptContent img {
 	width: 65%;
 }
 
-.ConceptContent div {
+.conceptContent div {
 	position: relative;
 	width: 100%;
 }
 
-.ConceptContent div > img.sub{
+.conceptContent div > img.sub{
 	position: absolute;
 	width: 30%;
 	left: 20%;
 	bottom: 0;
 }
 
-.ConceptContent div > img.sub_2{
+.conceptContent div > img.sub_2{
 	position: absolute;
 	width: 50%;
 	left: 20%;
 	bottom: 0;
 }
 
-.ConceptContent h3{
+.conceptContent h3{
 	text-align: left;
 	padding-left: 140px;
 }
 
-.ConceptContent div > p{
+.conceptContent div > p{
 	padding-left: 184px;
 	font-size: 14px;
 	text-align: left;
 	line-height: 1.7;
 }
 
-.ConceptContent_reverce {
+.conceptContent_reverce {
 	display: flex;
 	justify-content: space-between;
 	flex-direction: row-reverse;
@@ -466,29 +569,29 @@ form input[type="submit"]{
 	width: 80%;
 }
 
-.ConceptContent_reverce img {
+.conceptContent_reverce img {
 	width: 65%;
 }
 
-.ConceptContent_reverce div {
+.conceptContent_reverce div {
 	position: relative;
 	width: 100%;
 
 }
 
-.ConceptContent_reverce div > img.sub{
+.conceptContent_reverce div > img.sub{
 	position: absolute;
 	width: 30%;
 	right: 20%;
 	bottom:0;
 }
 
-.ConceptContent_reverce h3{
+.conceptContent_reverce h3{
 	text-align: left;
 	padding-left: 140px;
 }
 
-.ConceptContent_reverce div > p{
+.conceptContent_reverce div > p{
 	padding-left: 184px;
 	font-size: 14px;
 	text-align: left;
@@ -501,9 +604,12 @@ form input[type="submit"]{
 	text-align: center;
 }
 
+/* btn 設定
+   =================================================================== */
+
 .btn {
 	position: relative;
-    display: inline-block;
+  display: inline-block;
 	width: 330px;
 	border-radius: 64px;
 	margin: 30px auto 90px auto;
@@ -523,6 +629,112 @@ form input[type="submit"]{
 	text-decoration: none;
 	width: 100%;
 	text-align: center;
+}
+
+/* smallBtn 設定
+   =================================================================== */
+
+	 .smallBtn {
+		width: 140px;
+		border-radius: 48px;
+		background: #22b573;
+		text-decoration: none;
+		text-align: right;
+		margin: 40px auto;
+	}
+	
+	.smallBtn:hover{
+		background-color: #2BC781;
+	}
+	
+	.smallBtn a{
+		display: block;
+		font-size: 16px;
+		padding: 18px 3px 16px 6px;
+		color: #FFFFFF;
+		text-decoration: none;
+		text-align: center;
+		width: 100%;
+	}
+
+	.smallBtn a:hover{
+		color: #FFFFFF;
+	}
+
+
+/* comment 設定
+   =================================================================== */
+
+ul.commentContainer{
+	padding-inline-start: 0;
+	margin: 0 10px 10px 10px;
+}
+
+.comment{
+	display: flex;
+}
+
+.submitComment{
+	display: flex;
+	margin: 0 10px 10px 10px;
+}
+
+li.comment {
+	width: 100%;
+	border-bottom: dashed 1.5px #707070;
+
+}
+
+.Comment div img{
+	padding: 25px;
+}
+
+.Comment p{
+	font-size: 14px;
+	text-align: left;
+	padding: 25px;
+	margin: 10px 0 0 0;
+}
+
+li.submitComment {
+	width: 100%;
+	margin: 10px;
+}
+
+.submitComment div img{
+	padding: 25px;
+}
+
+.commentBox > form {
+	position: relative;
+	border-radius: 0;
+	border: 1px #707070 solid;
+	height: 50px;
+	margin-left: 15px;
+}
+
+.commentBox > form input[type="text"]  {
+	position: absolute;
+	font-size: 14px;
+	top:0;
+	left:0;
+	padding: 20px 5px;
+	width: 100%;
+}
+.commentBox > form input[type="submit"]  {
+	position: relative;
+	font-size: 14px;
+	width: 60px;
+	height: 42px;
+	border-radius: 21px;
+	border: 1px #707070 solid;
+	color: #707070;
+	margin: 50px 0 0 120px;
+}
+
+.commentBox > form input[type="submit"]:hover  {
+	border: 1px  #A3A3A3 solid;
+	color:  #A3A3A3;
 }
 
 /* footer 設定
