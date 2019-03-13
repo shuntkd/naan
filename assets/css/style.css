@@ -429,6 +429,10 @@ header a:hover{
 
 }
 
+.thumbnail .shopName{
+	padding: 30px;
+}
+
 .thumbnail > li {
 	width: 29%;
   }
@@ -466,7 +470,7 @@ header a:hover{
 		text-align: left;
 	}
 
-	.shopName{
+	.shopContents .shopProfile .shopName{
 		padding: 30px;
 	}
 
