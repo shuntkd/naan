@@ -1,0 +1,749 @@
+
+/* 基本設定
+   =================================================================== */
+   @font-face {
+	font-family: "komorebi-gothic-P";
+	src: url(../fonts/komorebi-gothic-P.eot) format('eot'),
+		 url(../fonts/komorebi-gothic-P.woff) format('woff');
+  }
+
+body{	
+	font-family: komorebi-gothic-P,'Kosugi Maru', sans-serif;
+}
+
+
+h3 {
+	font-size: 20px;
+}
+
+p{
+	line-height: 1.7;
+}
+
+.commom_container{
+	max-width: 1440px;
+	width: 100%;
+	margin: 0 auto;
+	color: #707070;
+}
+
+/* header設定
+   =================================================================== */
+header div{
+	width: 100%;
+	height: 36px;
+	background: #EDEDED;
+	opacity: 0.28;
+	z-index: 10;
+}
+
+.menu {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.menu li{
+	padding-top: 8px;
+	margin-right: 40px;	
+}
+
+header a {
+	text-decoration: none;
+	color: #1A1A1A;
+}
+
+header a:hover{
+	text-decoration: none;
+	color:  #707070;
+}
+
+
+
+/* hero設定
+   =================================================================== */
+
+.hero {
+	position: relative;
+	margin: auto;
+	background-image: url(../img/top/top.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	height: 795px;
+	margin-bottom: 80px;
+}
+
+.searchBox {
+	box-sizing: border-box;
+  position: absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+	border: 3px #000000 solid;
+	padding: 3px 10px;
+	border-radius: 36px;
+	height: 71px;
+	width: 300px;
+	background: #FFFFFF;
+	text-align: left;
+}
+
+.searchBox__input >input{
+	position:absolute;
+	border: none;
+	outline : none;
+	font-size: 20px;
+	height: 1em;
+	width: 250px;
+	top:22px;
+	left: 40px;
+  }
+  
+.searchBox__input:focus {
+	outline: 0;
+  }
+.searchBox__submit >input{
+	cursor: pointer;
+	font-family: FontAwesome;
+	font-size: 24px;
+	border: none;
+	background: none;
+	color: #000000;
+	position: absolute;
+	width: 2em;
+	height: 2em;
+	top: 8px;
+	right: 20px;
+	outline : none;
+  }
+
+/* HeroConcept 設定
+   =================================================================== */
+
+.heroConcept{
+	position: absolute;
+	background: url(../img/top/concept_leaf.png) no-repeat;
+	background-size: contain;
+	background-position: center center;
+	width: 220px;
+	height: 150px;
+	bottom: 0;
+	right: 0;
+}
+
+.heroConcept:hover{
+	background: url(../img/top/concept_leaf_hover.png) no-repeat;
+	background-size: contain;
+	background-position: center center;
+}
+
+.heroConcept p {
+	position: absolute;
+	font-size: 20px;
+	color: #FFFFFF;
+	top: 66px;
+	right: 50px;
+}
+
+/* content block 設定
+   =================================================================== */
+
+.content__title{
+	position: relative;
+	margin: 10px auto;
+	width: 60%;
+	text-align: center;
+}
+
+.content__title > h2 {
+	padding-top: 10px;
+	font-size: 26px;	
+}
+
+.content__title > p {
+	padding-top: 10px;
+	font-size: 16px;
+}
+
+.content__title .left{
+	position: absolute;
+	top: 0;
+	left:0;
+	height: 100%;
+
+}
+.content__title .right{
+	position: absolute;
+	top:0;
+	right:0;
+	height: 100%;
+}
+
+
+/* content__title--small block 設定
+   =================================================================== */
+
+	 .content__title--small{
+		position: relative;
+		margin: 10px auto;
+		width: 50%;
+		text-align: center;
+	}
+	
+	.content__title--small > h3 {
+		padding-top: 10px;
+		font-size: 20px;	
+	}
+	
+	
+	.content__title--small .left{
+		position: absolute;
+		top: 0;
+		left:0;
+		height: 100%;
+	
+	}
+	.content__title--small .right{
+		position: absolute;
+		top:0;
+		right:0;
+		height: 100%;
+	}
+
+
+/* shopList設定
+   =================================================================== */
+
+.shopList{
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+	text-align: center;
+	margin: 80px auto 0 auto;
+	width: 80%;
+}
+
+.shopList div.shopName{
+	position: relative;
+	background: url(../img/top/shop_bk.png) no-repeat;
+	background-size: contain;
+	height: 150px;
+	width: 100%;
+}
+
+.shopList div.shopName:hover{
+	position: relative;
+	background: url(../img/top/shop_bk_hover.png) no-repeat;
+	background-size: contain;
+	height: 150px;
+	width: 100%;
+}
+
+.shopList .left img{
+	position: absolute;
+	display: block;
+	height: 92%;
+	width: 92%;
+	top: 4%;
+	left: 4%;
+	-webkit-mask-image: url(../img/top/mask_left.png);
+	-webkit-mask-size:contain;	
+	-webkit-mask-position: center;
+	mask-image: url(../img/top/mask_left.png);
+	mask-size: contain;
+	mask-position: center;
+	-webkit-mask-repeat: no-repeat;
+	mask-repeat: no-repeat;
+}
+
+.shopList div.left{
+	position: relative;
+	width: 100%;
+	height: 320px;
+	background-image: url(../img/top/mask_left_pass.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	z-index: 10;	
+}
+
+.shopList .center img{
+	position: absolute;
+	display: block;
+	height: 92%;
+	width: 92%;
+	top: 4%;
+	left: 4%;
+	-webkit-mask-image: url(../img/top/mask_center.png);
+	-webkit-mask-size:contain;	
+	-webkit-mask-position: center;
+	mask-image: url(../img/top/mask_center.png);
+	mask-size: contain;
+	mask-position: center;
+	-webkit-mask-repeat: no-repeat;
+	mask-repeat: no-repeat;
+}
+
+.shopList div.center{
+	position: relative;
+	width: 100%;
+	height: 300px;
+	background-image: url(../img/top/mask_center_pass.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	z-index: 10;	
+}
+
+.shopList .right img{
+	position: absolute;
+	display: block;
+	height: 92%;
+	width: 92%;
+	top: 4%;
+	left: 3%;
+	-webkit-mask-image: url(../img/top/mask_right.png);
+	-webkit-mask-size:contain;	
+	-webkit-mask-position: center;
+	mask-image: url(../img/top/mask_right.png);
+	mask-size: contain;
+	mask-position: center;
+	-webkit-mask-repeat: no-repeat;
+	mask-repeat: no-repeat;
+}
+
+.shopList div.right{
+	position: relative;
+	width: 100%;
+	height: 300px;
+	background-image: url(../img/top/mask_right_pass.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	z-index: 10;	
+}
+
+.shopList p {
+	position: absolute;
+	width: 100%;
+	top:15px;
+	text-align: center;
+	font-size: 14px;
+	text-decoration: none;
+	color: #707070;
+	line-height: 1.7;
+}
+
+.shopList > li {
+	width: 30%;
+  }
+
+  .shopList li > div {
+	  height: 50%;
+  }
+
+/* Search 設定
+   =================================================================== */
+
+.search{
+	position: relative;
+	width: 100%;
+	height: 100px;
+	margin-bottom: 10px;
+}
+
+/* searchWord 設定
+   =================================================================== */
+
+.searchWord{
+	display: flex;
+	position: absolute;
+	top:50%;
+	left:3%;
+}
+
+.searchWord li{
+	position: relative;
+	height: 42px;
+	border-radius: 21px;
+	background: #D6D6D6;
+	margin-right: 5px;
+}
+
+.searchWord li p{
+	width: 100%;
+	font-size: 14px;
+	text-decoration: none;
+	padding: 12px 16px;
+}
+
+/* thumbnail設定
+   =================================================================== */
+
+.thumbnail{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	text-align: center;
+	margin:  75px auto;
+	width: 89%;
+	padding-inline-start: 0;
+}
+
+.thumbnail a {
+	text-decoration: none;
+	color: #707070;
+}
+
+.thumbnail a:hover {
+	text-decoration: none;
+	color: #A3A3A3;
+}
+
+.thumbnail p{
+	font-size: 16px;
+}
+
+.thumbnail .shopImg img{
+
+	width: 92%;
+	-webkit-mask-image: url(../img/result/result_mask.png);
+	-webkit-mask-size:contain;	
+	-webkit-mask-position: center;
+	mask-image: url(../img/result/result_mask.png);
+	mask-size: contain;
+	mask-position: center;
+	-webkit-mask-repeat: no-repeat;
+	mask-repeat: no-repeat;
+	margin: 4%;
+	object-fit: contain;
+}
+
+.thumbnail div.shopImg{
+	width: 100%;
+	background-image: url(../img/result/result_mask_pass.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	z-index: 10;
+
+}
+
+.thumbnail .shopName{
+	padding: 30px;
+}
+
+.thumbnail > li {
+	width: 29%;
+  }
+
+/* shopContents設定
+   =================================================================== */
+
+	 .shopContents{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		text-align: left;
+		margin:  75px auto;
+		width: 89%;
+		padding-inline-start: 0;
+	}
+
+	
+	.shopContents a {
+		text-decoration: none;
+		color: #707070;
+	}
+	
+	.shopContents a:hover {
+		text-decoration: none;
+		color: #A3A3A3;
+	}
+	
+	.shopContents h3{
+		font-size: 24px;
+	}
+	
+	.shopContents .shopProfile .shopName > p{
+		font-size: 16px;
+		text-align: left;
+	}
+
+	.shopContents .shopProfile .shopName{
+		padding: 30px;
+	}
+
+	.shopProfile{
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.shopProfile > .shopName{
+		width: 50%;
+	}
+	
+	.shopContents .shopImg img{
+	
+		width: 92%;
+		-webkit-mask-image: url(../img/result/result_mask.png);
+		-webkit-mask-size:contain;	
+		-webkit-mask-position: center;
+		mask-image: url(../img/result/result_mask.png);
+		mask-size: contain;
+		mask-position: center;
+		-webkit-mask-repeat: no-repeat;
+		mask-repeat: no-repeat;
+		margin: 4%;
+		object-fit: contain;
+	}
+	
+	.shopContents div.shopImg{
+		width: 100%;
+		background-image: url(../img/result/result_mask_pass.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+		z-index: 10;
+	
+	}
+	
+	.shopContents > div {
+		width: 49%;
+		}
+	
+
+/* conceptContent 設定
+   =================================================================== */
+.content {
+	text-align: center;
+}
+
+.conceptContent h3:first-letter {
+	font-size: 62px;
+}
+
+.conceptContent_reverce h3:first-letter {
+	font-size: 62px;
+}
+
+.conceptContent {
+	display: flex;
+	justify-content: space-between;
+	margin: 100px auto;
+	width: 80%;
+}
+
+.conceptContent img {
+	width: 65%;
+}
+
+.conceptContent div {
+	position: relative;
+	width: 100%;
+}
+
+.conceptContent div > img.sub{
+	position: absolute;
+	width: 30%;
+	left: 20%;
+	bottom: 0;
+}
+
+.conceptContent div > img.sub_2{
+	position: absolute;
+	width: 50%;
+	left: 20%;
+	bottom: 0;
+}
+
+.conceptContent h3{
+	text-align: left;
+	padding-left: 140px;
+}
+
+.conceptContent div > p{
+	padding-left: 184px;
+	font-size: 14px;
+	text-align: left;
+	line-height: 1.7;
+}
+
+.conceptContent_reverce {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row-reverse;
+	margin: 100px auto;
+	width: 80%;
+}
+
+.conceptContent_reverce img {
+	width: 65%;
+}
+
+.conceptContent_reverce div {
+	position: relative;
+	width: 100%;
+
+}
+
+.conceptContent_reverce div > img.sub{
+	position: absolute;
+	width: 30%;
+	right: 20%;
+	bottom:0;
+}
+
+.conceptContent_reverce h3{
+	text-align: left;
+	padding-left: 140px;
+}
+
+.conceptContent_reverce div > p{
+	padding-left: 184px;
+	font-size: 14px;
+	text-align: left;
+	line-height: 1.7;
+}
+
+
+
+.content p{
+	text-align: center;
+}
+
+/* btn 設定
+   =================================================================== */
+
+.btn {
+	position: relative;
+	display: inline-block;
+	border-radius: 64px;
+	margin: 30px auto 60px auto;
+	background: #22b573;
+	text-decoration: none;
+}
+
+.btn:hover{
+	background-color: #2BC781;
+}
+
+.btn a{
+	display: block;
+	font-size: 20px;
+	padding: 1em 1.5em;
+	color: #FFFFFF;
+	text-decoration: none;
+	width: 100%;
+	text-align: center;
+}
+
+.btn a:hover{
+	color: #FFFFFF;
+}
+
+
+/* comment 設定
+   =================================================================== */
+
+ul.commentList{
+	padding-inline-start: 0;
+	margin: 0 10px 10px 10px;
+}
+
+.comment{
+	display: flex;
+}
+
+.submitComment{
+	display: flex;
+	padding: 0 10px;
+}
+
+li.comment {
+	width: 100%;
+	border-bottom: dashed 1.5px #707070;
+}
+
+.comment div{
+	width: 30%;
+	padding: 25px;
+}
+
+.shopContents__container > p{
+	padding-left: 30px;
+	text-align: left;
+}
+
+.shopContents__comment p{
+	font-size: 14px;
+	text-align: left;
+	padding: 30px;
+	margin: 0;
+}
+
+.submitComment .icon{
+	width: 30%;
+	padding: 25px;
+}
+
+.commentBox{
+	width: 100%;
+	text-align: center;
+}
+
+.commentBox p{
+	position: relative;
+	border: 1px #707070 solid;
+	margin: 25px;
+}
+
+input.commentBox__input{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	padding: 2px;
+	width: 100%;
+	font-size: 14px;
+	border: none;
+	outline : none;
+}
+
+input.commentBox__submit{
+	font-size: 14px;
+	padding: 1rem 1.5rem;
+	border-radius: 3rem;
+	border: 1px #707070 solid;
+	outline: none;
+	color: #707070;
+}
+
+input.commentBox__submit:hover  {
+	border: 1px  #A3A3A3 solid;
+	color:  #A3A3A3;
+}
+
+/* footer 設定
+   =================================================================== */
+
+
+footer {
+		width: 80%;
+		margin: 0 auto;
+		display:block;
+		text-align: center;
+}
+
+footer ul li {
+	display: inline;
+}
+
+footer a {
+	text-decoration: none;
+	color: #707070;
+}
+
+footer a:hover{
+	text-decoration: none;
+	color: #A3A3A3;
+}
