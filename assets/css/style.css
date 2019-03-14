@@ -211,7 +211,7 @@ header a:hover{
 	}
 
 
-/* shopList設定
+/* multiple-items設定
    =================================================================== */
 
 .shopList{
@@ -223,23 +223,31 @@ header a:hover{
 	width: 80%;
 }
 
-.shopList div.shopName{
+.multiple-items{
+	text-align: center;
+}
+
+.multiple-items div.shopName{
 	position: relative;
+	display: block;
 	background: url(../img/top/shop_bk.png) no-repeat;
 	background-size: contain;
-	height: 150px;
+	height: 100px;
 	width: 100%;
 }
 
-.shopList div.shopName:hover{
+.multiple-items div.shopName:hover{
 	position: relative;
+	display: block;
 	background: url(../img/top/shop_bk_hover.png) no-repeat;
 	background-size: contain;
-	height: 150px;
+	height: 100px;
 	width: 100%;
 }
 
-.shopList .left img{
+
+.multiple-items li:nth-child(3n+1) .swiper-slide img
+{
 	position: absolute;
 	display: block;
 	height: 92%;
@@ -256,7 +264,8 @@ header a:hover{
 	mask-repeat: no-repeat;
 }
 
-.shopList div.left{
+.multiple-items li:nth-child(3n+1) div.swiper-slide
+{
 	position: relative;
 	width: 100%;
 	height: 320px;
@@ -267,7 +276,7 @@ header a:hover{
 	z-index: 10;	
 }
 
-.shopList .center img{
+.multiple-items li:nth-child(3n+2) .swiper-slide img{
 	position: absolute;
 	display: block;
 	height: 92%;
@@ -284,7 +293,7 @@ header a:hover{
 	mask-repeat: no-repeat;
 }
 
-.shopList div.center{
+.multiple-items li:nth-child(3n+2) div.swiper-slide{
 	position: relative;
 	width: 100%;
 	height: 300px;
@@ -295,7 +304,7 @@ header a:hover{
 	z-index: 10;	
 }
 
-.shopList .right img{
+.multiple-items li:nth-child(3n+3) .swiper-slide img{
 	position: absolute;
 	display: block;
 	height: 92%;
@@ -312,7 +321,7 @@ header a:hover{
 	mask-repeat: no-repeat;
 }
 
-.shopList div.right{
+.multiple-items li:nth-child(3n+3) div.swiper-slide{
 	position: relative;
 	width: 100%;
 	height: 300px;
@@ -323,10 +332,10 @@ header a:hover{
 	z-index: 10;	
 }
 
-.shopList p {
+.multiple-items p {
 	position: absolute;
 	width: 100%;
-	top:15px;
+	top:30px;
 	text-align: center;
 	font-size: 14px;
 	text-decoration: none;
