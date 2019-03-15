@@ -214,24 +214,13 @@ header a:hover{
 /* multiple-items設定
    =================================================================== */
 
-.shopList{
-	display: flex;
-	align-items: flex-end;
-	justify-content: space-between;
-	text-align: center;
-	margin: 80px auto 0 auto;
-	width: 80%;
-}
-
-.multiple-items{
-	text-align: center;
-}
 
 .multiple-items div.shopName{
 	position: relative;
 	display: block;
 	background: url(../img/top/shop_bk.png) no-repeat;
 	background-size: contain;
+	background-position: center;
 	height: 100px;
 	width: 100%;
 }
@@ -241,6 +230,7 @@ header a:hover{
 	display: block;
 	background: url(../img/top/shop_bk_hover.png) no-repeat;
 	background-size: contain;
+	background-position: center;
 	height: 100px;
 	width: 100%;
 }
@@ -343,13 +333,6 @@ header a:hover{
 	line-height: 1.7;
 }
 
-.shopList > li {
-	width: 30%;
-  }
-
-  .shopList li > div {
-	  height: 50%;
-  }
 
 /* Search 設定
    =================================================================== */
