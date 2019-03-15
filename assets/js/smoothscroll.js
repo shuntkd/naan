@@ -2,7 +2,7 @@
 
 function smoothscroll(){
    
-        $('a[href^=#]').click(function() {
+        $('a[href^="#"]').click(function() {
                
             
         // スクロールの速度
@@ -21,6 +21,6 @@ function smoothscroll(){
 
 };
 
-$(window).load(function(){
+$(window).on('load',function(){
         smoothscroll();
 });
