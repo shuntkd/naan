@@ -218,22 +218,30 @@ header a:hover{
 .multiple-items div.shopName{
 	position: relative;
 	display: block;
-	background: url(../img/top/shop_bk.png) no-repeat;
-	background-size: contain;
-	background-position: center;
-	height: 100px;
 	width: 100%;
+	height: 60px;
 }
 
-.multiple-items div.shopName:hover{
-	position: relative;
+.multiple-items div.shopName img{
+	position: absolute;
 	display: block;
-	background: url(../img/top/shop_bk_hover.png) no-repeat;
-	background-size: contain;
-	background-position: center;
-	height: 100px;
 	width: 100%;
+	margin: 0 auto;
 }
+
+.multiple-items div.shopName p{
+	position: absolute;
+	display: block;
+	text-align: center;
+	font-size: 14px;
+	text-decoration: none;
+	color: #707070;
+	line-height: 1.7;
+	top: 50%;
+	left: 45%;
+	transform: translate(-50% -45%);
+}
+
 
 
 .multiple-items li:nth-child(3n+1) .swiper-slide img
@@ -242,6 +250,7 @@ header a:hover{
 	display: block;
 	height: 92%;
 	width: 92%;
+	max-width: 368px;
 	top: 4%;
 	left: 4%;
 	-webkit-mask-image: url(../img/top/mask_left.png);
@@ -258,7 +267,7 @@ header a:hover{
 {
 	position: relative;
 	width: 100%;
-	height: 320px;
+	height: 300px;
 	background-image: url(../img/top/mask_left_pass.png);
 	background-size: contain;
 	background-repeat: no-repeat;
@@ -271,6 +280,7 @@ header a:hover{
 	display: block;
 	height: 92%;
 	width: 92%;
+	max-width: 368px;
 	top: 4%;
 	left: 4%;
 	-webkit-mask-image: url(../img/top/mask_center.png);
@@ -299,6 +309,7 @@ header a:hover{
 	display: block;
 	height: 92%;
 	width: 92%;
+	max-width: 368px;
 	top: 4%;
 	left: 3%;
 	-webkit-mask-image: url(../img/top/mask_right.png);
@@ -322,16 +333,6 @@ header a:hover{
 	z-index: 10;	
 }
 
-.multiple-items p {
-	position: absolute;
-	width: 100%;
-	top:30px;
-	text-align: center;
-	font-size: 14px;
-	text-decoration: none;
-	color: #707070;
-	line-height: 1.7;
-}
 
 
 /* Search 設定
