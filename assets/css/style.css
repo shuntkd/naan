@@ -214,18 +214,22 @@ header a:hover{
 /* multiple-items設定
    =================================================================== */
 
+.multiple-items{
+	margin: 100px auto;
+}
+
+.multiple-items .slick-slide{
+	height: auto;
+}
 
 .multiple-items div.shopName{
 	position: relative;
 	display: block;
 	width: 100%;
-	height: 60px;
 }
 
 .multiple-items div.shopName img{
-	position: absolute;
-	display: block;
-	width: 100%;
+	width: 80%;
 	margin: 0 auto;
 }
 
@@ -237,12 +241,11 @@ header a:hover{
 	text-decoration: none;
 	color: #707070;
 	line-height: 1.7;
-	top: 50%;
+	top: 25%;
 	left: 45%;
-	transform: translate(-50% -45%);
+	transform: translate(-25% -45%);
+	text-align: center;
 }
-
-
 
 .multiple-items li:nth-child(3n+1) .swiper-slide img
 {
