@@ -241,21 +241,22 @@ header a:hover{
 	text-decoration: none;
 	color: #707070;
 	line-height: 1.7;
-	top: 25%;
-	left: 45%;
-	transform: translate(-25% -45%);
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50% -50%);
 	text-align: center;
 }
 
-.multiple-items li:nth-child(3n+1) .swiper-slide img
+.multiple-items li .swiper-slide img
 {
 	position: absolute;
 	display: block;
-	height: 92%;
 	width: 92%;
-	max-width: 368px;
-	top: 4%;
-	left: 4%;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+   	transform: translate(-50%, -50%);
 	-webkit-mask-image: url(../img/top/mask_left.png);
 	-webkit-mask-size:contain;	
 	-webkit-mask-position: center;
@@ -266,74 +267,61 @@ header a:hover{
 	mask-repeat: no-repeat;
 }
 
-.multiple-items li:nth-child(3n+1) div.swiper-slide
+@media screen and (min-width:480px){
+	.multiple-items li div.swiper-slide
+	{
+		position: relative;
+		width: 100%;
+		height: 200px;
+		background-image: url(../img/top/mask_left_pass.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+		z-index: 10;	
+	}
+}
+
+@media screen and (min-width:768px){
+	.multiple-items li div.swiper-slide
+	{
+		height: 300px;
+	}
+}
+
+@media screen and (min-width:1024px){
+	.multiple-items li div.swiper-slide
+	{
+		height: 450px;
+	}
+}
+
+.multiple-items li:nth-child(3n)  .swiper-slide img
 {
-	position: relative;
-	width: 100%;
-	height: 300px;
+	-webkit-mask-image: url(../img/top/mask_left.png);
+	mask-image: url(../img/top/mask_left.png);
+}
+
+.multiple-items li:nth-child(3n)  div.swiper-slide
+{
 	background-image: url(../img/top/mask_left_pass.png);
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: center;
-	z-index: 10;	
 }
 
-.multiple-items li:nth-child(3n+2) .swiper-slide img{
-	position: absolute;
-	display: block;
-	height: 92%;
-	width: 92%;
-	max-width: 368px;
-	top: 4%;
-	left: 4%;
+.multiple-items li:nth-child(3n+2)  .swiper-slide img{
 	-webkit-mask-image: url(../img/top/mask_center.png);
-	-webkit-mask-size:contain;	
-	-webkit-mask-position: center;
 	mask-image: url(../img/top/mask_center.png);
-	mask-size: contain;
-	mask-position: center;
-	-webkit-mask-repeat: no-repeat;
-	mask-repeat: no-repeat;
 }
 
-.multiple-items li:nth-child(3n+2) div.swiper-slide{
-	position: relative;
-	width: 100%;
-	height: 300px;
+.multiple-items li:nth-child(3n+2)  div.swiper-slide{
 	background-image: url(../img/top/mask_center_pass.png);
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: center;
-	z-index: 10;	
 }
 
-.multiple-items li:nth-child(3n+3) .swiper-slide img{
-	position: absolute;
-	display: block;
-	height: 92%;
-	width: 92%;
-	max-width: 368px;
-	top: 4%;
-	left: 3%;
+.multiple-items li:nth-child(3n+3)  .swiper-slide img{
 	-webkit-mask-image: url(../img/top/mask_right.png);
-	-webkit-mask-size:contain;	
-	-webkit-mask-position: center;
 	mask-image: url(../img/top/mask_right.png);
-	mask-size: contain;
-	mask-position: center;
-	-webkit-mask-repeat: no-repeat;
-	mask-repeat: no-repeat;
 }
 
-.multiple-items li:nth-child(3n+3) div.swiper-slide{
-	position: relative;
-	width: 100%;
-	height: 300px;
+.multiple-items li:nth-child(3n+3)  div.swiper-slide{
 	background-image: url(../img/top/mask_right_pass.png);
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: center;
-	z-index: 10;	
 }
 
 
