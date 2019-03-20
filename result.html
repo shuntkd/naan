@@ -8,6 +8,7 @@
 		<!-- jQuery.jsの読み込み -->
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" defer></script>
 		<script type="text/javascript" src="assets/js/smoothscroll.js" defer></script>
+		<script type="text/javascript" src="assets/js/api.js" defer></script>
 	</head>
 	<body>
 		<div class="commom_container">
@@ -32,73 +33,16 @@
 
 
 					<div class="search">
-						<ul class="searchWord">
-							<li><p>地域</p></li>
-							<li><p>地域地域</p></li>
-						</ul>
+						<ul id="searchWord"></ul>
 						<div class="searchBox">
 							<form method="get" action="#">
-									<div class="searchBox__input"><input type="text" placeholder="地域を入力して検索"></div>
-									<div class="searchBox__submit"><input type="submit" value="&#xf002"></div>
+									<div class="searchBox__input"><input type="text" id="freeword" placeholder="地域を入力して検索"/></div>
+									<i class="searchBox__submit"><input type="submit" id="submit" value="&#xf002"/></i>
 							</form>
 						</div>
 					</div>
 						
-					<ul class="thumbnail">
-						<li>
-							<a href="">
-								<div class="shopImg"><img src="assets/img/top/left.jpg" alt="image"></div>
-								<div class="shopName">
-										<p>インダス<br>名古屋市</p>
-								</div>
-							</a>
-						</li>
-
-						<li>
-							<a href="">
-								<div class="shopImg"><img src="assets/img/top/left.jpg" alt="image"></div>
-								<div class="shopName">
-										<p>インダス<br>名古屋市</p>
-								</div>
-							</a>
-						</li>
-
-						<li>
-							<a href="">
-								<div class="shopImg"><img src="assets/img/top/left.jpg" alt="image"></div>
-								<div class="shopName">
-										<p>インダス<br>名古屋市</p>
-								</div>
-							</a>
-						</li>
-
-						<li>
-							<a href="">
-								<div class="shopImg"><img src="assets/img/top/left.jpg" alt="image"></div>
-								<div class="shopName">
-										<p>インダス<br>名古屋市</p>
-								</div>
-							</a>
-						</li>
-						<li>
-								<a href="">
-									<div class="shopImg"><img src="assets/img/top/left.jpg" alt="image"></div>
-									<div class="shopName">
-											<p>インダス<br>名古屋市</p>
-									</div>
-								</a>
-							</li>
-	
-							<li>
-								<a href="">
-									<div class="shopImg"><img src="assets/img/top/left.jpg" alt="image"></div>
-									<div class="shopName">
-											<p>インダス<br>名古屋市</p>
-									</div>
-								</a>
-							</li>
-
-					</ul>
+					<ul id="thumbnail"></ul>
 				</section>
 
 			</div>

@@ -8,6 +8,7 @@
 		<!-- jQuery.jsの読み込み -->
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" defer></script>
 		<script type="text/javascript" src="assets/js/smoothscroll.js" defer></script>
+		<script type="text/javascript" src="assets/js/api.js" defer></script>
 	</head>
 	<body>
 		<div class="commom_container">
@@ -15,16 +16,18 @@
 
 			<div class="hero">
 				<div class="searchBox">
-					<form method="get" action="#">
-						<div class="searchBox__input"><input type="text" placeholder="地域を入力して検索"></div>
-						<i class="searchBox__submit"><input type="submit" value="&#xf002"></i>
+					<form action="result.html" method="GET" >
+						<div class="searchBox__input"><input type="text" name="freeword" id="freeword" placeholder="地域を入力して検索"/></div>
+						<i class="searchBox__submit"><input type="submit" id="submit" value="&#xf002"/></i>
 					</form>
 				</div>
 					<a href="#concept" class="heroConcept">
 							<p>コンセプト</p>
 					</a>
 			</div>
-
+			<table id="table" >
+					<tr><th>店舗名</th><th>アクセス</th></tr>
+			</table>
 			
 
 			<div class="contents_container">

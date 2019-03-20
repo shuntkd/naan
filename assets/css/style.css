@@ -355,14 +355,14 @@ header a:hover{
 /* searchWord 設定
    =================================================================== */
 
-.searchWord{
+#searchWord{
 	display: flex;
 	position: absolute;
 	top:50%;
 	left:3%;
 }
 
-.searchWord li{
+#searchWord li{
 	position: relative;
 	height: 42px;
 	border-radius: 21px;
@@ -370,7 +370,7 @@ header a:hover{
 	margin-right: 5px;
 }
 
-.searchWord li p{
+#searchWord li p{
 	width: 100%;
 	font-size: 14px;
 	text-decoration: none;
@@ -380,7 +380,7 @@ header a:hover{
 /* thumbnail設定
    =================================================================== */
 
-.thumbnail{
+#thumbnail{
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
@@ -390,21 +390,21 @@ header a:hover{
 	padding-inline-start: 0;
 }
 
-.thumbnail a {
+#thumbnail a {
 	text-decoration: none;
 	color: #707070;
 }
 
-.thumbnail a:hover {
+#thumbnail a:hover {
 	text-decoration: none;
 	color: #A3A3A3;
 }
 
-.thumbnail p{
+#thumbnail p{
 	font-size: 16px;
 }
 
-.thumbnail .shopImg img{
+#thumbnail .shopImg img{
 
 	width: 92%;
 	-webkit-mask-image: url(../img/result/result_mask.png);
@@ -419,7 +419,7 @@ header a:hover{
 	object-fit: contain;
 }
 
-.thumbnail div.shopImg{
+#thumbnail div.shopImg{
 	width: 100%;
 	background-image: url(../img/result/result_mask_pass.png);
 	background-size: contain;
@@ -429,11 +429,11 @@ header a:hover{
 
 }
 
-.thumbnail .shopName{
+#thumbnail .shopName{
 	padding: 30px;
 }
 
-.thumbnail > li {
+#thumbnail > li {
 	width: 29%;
   }
 
