@@ -211,41 +211,52 @@ header a:hover{
 	}
 
 
-/* shopList設定
+/* multiple-items設定
    =================================================================== */
 
-.shopList{
-	display: flex;
-	align-items: flex-end;
-	justify-content: space-between;
-	text-align: center;
-	margin: 80px auto 0 auto;
+.multiple-items{
+	margin: 100px auto;
+}
+
+.multiple-items .slick-slide{
+	height: auto;
+}
+
+.multiple-items div.shopName{
+	position: relative;
+	display: block;
+	width: 100%;
+}
+
+.multiple-items div.shopName img{
 	width: 80%;
+	margin: 0 auto;
 }
 
-.shopList div.shopName{
-	position: relative;
-	background: url(../img/top/shop_bk.png) no-repeat;
-	background-size: contain;
-	height: 150px;
-	width: 100%;
-}
-
-.shopList div.shopName:hover{
-	position: relative;
-	background: url(../img/top/shop_bk_hover.png) no-repeat;
-	background-size: contain;
-	height: 150px;
-	width: 100%;
-}
-
-.shopList .left img{
+.multiple-items div.shopName p{
 	position: absolute;
 	display: block;
-	height: 92%;
+	text-align: center;
+	font-size: 14px;
+	text-decoration: none;
+	color: #707070;
+	line-height: 1.7;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50% -50%);
+	text-align: center;
+}
+
+.multiple-items li .swiper-slide img
+{
+	position: absolute;
+	display: block;
 	width: 92%;
-	top: 4%;
-	left: 4%;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+   	transform: translate(-50%, -50%);
 	-webkit-mask-image: url(../img/top/mask_left.png);
 	-webkit-mask-size:contain;	
 	-webkit-mask-position: center;
@@ -256,91 +267,64 @@ header a:hover{
 	mask-repeat: no-repeat;
 }
 
-.shopList div.left{
-	position: relative;
-	width: 100%;
-	height: 320px;
+@media screen and (min-width:480px){
+	.multiple-items li div.swiper-slide
+	{
+		position: relative;
+		width: 100%;
+		height: 200px;
+		background-image: url(../img/top/mask_left_pass.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+		z-index: 10;	
+	}
+}
+
+@media screen and (min-width:768px){
+	.multiple-items li div.swiper-slide
+	{
+		height: 300px;
+	}
+}
+
+@media screen and (min-width:1024px){
+	.multiple-items li div.swiper-slide
+	{
+		height: 450px;
+	}
+}
+
+.multiple-items li:nth-child(3n)  .swiper-slide img
+{
+	-webkit-mask-image: url(../img/top/mask_left.png);
+	mask-image: url(../img/top/mask_left.png);
+}
+
+.multiple-items li:nth-child(3n)  div.swiper-slide
+{
 	background-image: url(../img/top/mask_left_pass.png);
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: center;
-	z-index: 10;	
 }
 
-.shopList .center img{
-	position: absolute;
-	display: block;
-	height: 92%;
-	width: 92%;
-	top: 4%;
-	left: 4%;
+.multiple-items li:nth-child(3n+2)  .swiper-slide img{
 	-webkit-mask-image: url(../img/top/mask_center.png);
-	-webkit-mask-size:contain;	
-	-webkit-mask-position: center;
 	mask-image: url(../img/top/mask_center.png);
-	mask-size: contain;
-	mask-position: center;
-	-webkit-mask-repeat: no-repeat;
-	mask-repeat: no-repeat;
 }
 
-.shopList div.center{
-	position: relative;
-	width: 100%;
-	height: 300px;
+.multiple-items li:nth-child(3n+2)  div.swiper-slide{
 	background-image: url(../img/top/mask_center_pass.png);
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: center;
-	z-index: 10;	
 }
 
-.shopList .right img{
-	position: absolute;
-	display: block;
-	height: 92%;
-	width: 92%;
-	top: 4%;
-	left: 3%;
+.multiple-items li:nth-child(3n+3)  .swiper-slide img{
 	-webkit-mask-image: url(../img/top/mask_right.png);
-	-webkit-mask-size:contain;	
-	-webkit-mask-position: center;
 	mask-image: url(../img/top/mask_right.png);
-	mask-size: contain;
-	mask-position: center;
-	-webkit-mask-repeat: no-repeat;
-	mask-repeat: no-repeat;
 }
 
-.shopList div.right{
-	position: relative;
-	width: 100%;
-	height: 300px;
+.multiple-items li:nth-child(3n+3)  div.swiper-slide{
 	background-image: url(../img/top/mask_right_pass.png);
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: center;
-	z-index: 10;	
 }
 
-.shopList p {
-	position: absolute;
-	width: 100%;
-	top:15px;
-	text-align: center;
-	font-size: 14px;
-	text-decoration: none;
-	color: #707070;
-	line-height: 1.7;
-}
 
-.shopList > li {
-	width: 30%;
-  }
-
-  .shopList li > div {
-	  height: 50%;
-  }
 
 /* Search 設定
    =================================================================== */
