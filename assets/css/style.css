@@ -390,10 +390,13 @@ header a:hover{
 	padding-inline-start: 0;
 }
 
+
 .thumbnail a {
+	flex-direction: column;
 	text-decoration: none;
 	color: #707070;
 }
+
 
 .thumbnail a:hover {
 	text-decoration: none;
@@ -402,6 +405,10 @@ header a:hover{
 
 .thumbnail p{
 	font-size: 16px;
+}
+
+.thumbnail a div.shopImg{
+	align-self: stretch;
 }
 
 .thumbnail .shopImg img{
