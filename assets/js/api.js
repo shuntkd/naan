@@ -122,8 +122,4 @@ $(window).load(function(){
         }).then(function() {
             freewordSearch();
         });
-    $(window).load(function(){
-        var shopImg = $(".thumbnail>div.shopImg");
-        shopImg.heightLine();
-    });
 });
