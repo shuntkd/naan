@@ -3,6 +3,7 @@ var availableTagM = [];
 var list = [];
 var isReadSgwod = false;
 var isReadMgwod = false;
+var isReadThumb = false;
 
 /** Sエリア情報を配列へ*/
 function s_gword( result ) {
@@ -67,13 +68,15 @@ function showResult( result ) {
 
     for ( var i in result.rest ) { 
         if(result.rest[i].image_url.shop_image1!==""){
-            thumbnail.append('<li><a href=""><div class="shopImg"><img src='+result.rest[i].image_url.shop_image1+' alt="image"></div><div class="shopName"><p>'+result.rest[i].name+'<br>'+result.rest[i].access.station+'</p></div></a></li>');
+            thumbnail.append('<li><a href=""><div class="shopImg"><img src='+result.rest[i].image_url.shop_image1+' class="thumb" alt="img"></div><div class="shopName"><p>'+result.rest[i].name+'<br>'+result.rest[i].access.station+'</p></div></a></li>');
         } else if(result.rest[i].image_url.shop_image2!=="") {
-            thumbnail.append('<li><a href=""><div class="shopImg"><img src='+result.rest[i].image_url.shop_image2+' alt="image"></div><div class="shopName"><p>'+result.rest[i].name+'<br>'+result.rest[i].access.station+'</p></div></a></li>');
+            thumbnail.append('<li><a href=""><div class="shopImg"><img src='+result.rest[i].image_url.shop_image2+' class="thumb" alt="img"></div><div class="shopName"><p>'+result.rest[i].name+'<br>'+result.rest[i].access.station+'</p></div></a></li>');
         } else {
-            thumbnail.append('<li><a href=""><div class="shopImg"><img src=assets/img/result/noImage.png alt="image"></div><div class="shopName"><p>'+result.rest[i].name+'<br>'+result.rest[i].access.station+'</p></div></a></li>');
+            thumbnail.append('<li><a href=""><div class="shopImg"><img src=assets/img/result/noImage.png class="thumb" alt="img"></div><div class="shopName"><p>'+result.rest[i].name+'<br>'+result.rest[i].access.station+'</p></div></a></li>');
         }     
     };
+
+    isReadThumb = true;
 };
 
 
@@ -115,11 +118,31 @@ function freewordSearch(){
     }
 };
 
+function resize(){
+
+    var elms = document.getElementsByClassName("thumb");
+    for (i=0; elms[i]; i++){
+        if(elms[i].width < 300){
+            elms[i].src="assets/img/result/noimage.png";
+        }       
+    };
+
+
+};
+
 $(window).load(function(){
     Promise.resolve()
         .then(function() {
             return gword();
         }).then(function() {
             freewordSearch();
+        }).then(function waitCall() {
+            if(isReadThumb == false){
+                setTimeout(function(){
+                    waitCall();
+                }, 500);
+            }else {
+                resize();
+            }           
         });
 });
