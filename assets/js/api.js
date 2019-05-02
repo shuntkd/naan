@@ -121,8 +121,25 @@ function freewordSearch(){
 function resize(){
 
     var elms = document.getElementsByClassName("thumb");
+    var elmsWidth =[];
+    var elmsHeight = [];
     for (i=0; elms[i]; i++){
-        if(elms[i].width < 300){
+        var width = elms[i].width;
+        var height = elms[i].height;
+        if( width != null && !isNaN(width)){
+        elmsWidth[i]=width;
+        elmsHeight[i]=height;
+        }else{
+            elmsWidth[i]=0;
+            elmsHeight[i]=0;
+        }
+    };
+
+    var maxWidth = Math.max.apply(null,elmsWidth);
+    var maxHeight = Math.max.apply(null,elmsHeight);
+
+    for (i=0; elms[i]; i++){
+        if(elms[i].width < maxWidth || elms[i].height < maxHeight){
             elms[i].src="assets/img/result/noimage.png";
         }       
     };
