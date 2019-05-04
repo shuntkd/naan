@@ -2,11 +2,11 @@
 
 function smoothscroll(){
    
-        $('a[href^=#]').click(function() {
+        $('a[href^="#"]').click(function() {
                
             
         // スクロールの速度
-        var speed = 400; // ミリ秒
+        var speed = 1300; // ミリ秒
         // アンカーの値取得
         var href= $(this).attr("href");
         // 移動先を取得
@@ -21,6 +21,6 @@ function smoothscroll(){
 
 };
 
-$(window).load(function(){
+$(window).on('load',function(){
         smoothscroll();
 });
