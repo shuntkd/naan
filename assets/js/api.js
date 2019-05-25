@@ -68,11 +68,11 @@ function showResult( result ) {
 
     for ( var i in result.rest ) { 
         if(result.rest[i].image_url.shop_image1!==""){
-            thumbnail.append('<li><a href=""><div class="shopImg"><img src='+result.rest[i].image_url.shop_image1+' class="thumb" alt="img"></div><div class="shopName"><p>'+result.rest[i].name+'<br>'+result.rest[i].access.station+'</p></div></a></li>');
+            thumbnail.append('<li><a href="shop.html?shopName='+result.rest[i].name+'&url='+result.rest[i].url+'&area='+result.rest[i].code.areaname_s+'&shopImg='+result.rest[i].image_url.shop_image1+'"><div class="shopImg"><img src='+result.rest[i].image_url.shop_image1+' class="thumb" alt="img"></div><div class="shopName"><p>'+result.rest[i].name+'<br>'+result.rest[i].access.station+'</p></div></a></li>');
         } else if(result.rest[i].image_url.shop_image2!=="") {
-            thumbnail.append('<li><a href=""><div class="shopImg"><img src='+result.rest[i].image_url.shop_image2+' class="thumb" alt="img"></div><div class="shopName"><p>'+result.rest[i].name+'<br>'+result.rest[i].access.station+'</p></div></a></li>');
+            thumbnail.append('<li><a href="shop.html?shopName='+result.rest[i].name+'&url='+result.rest[i].url+'&area='+result.rest[i].code.areaname_s+'&shopImg='+result.rest[i].image_url.shop_image2+'"><div class="shopImg"><img src='+result.rest[i].image_url.shop_image2+' class="thumb" alt="img"></div><div class="shopName"><p>'+result.rest[i].name+'<br>'+result.rest[i].access.station+'</p></div></a></li>');
         } else {
-            thumbnail.append('<li><a href=""><div class="shopImg"><img src=assets/img/result/noImage.png class="thumb" alt="img"></div><div class="shopName"><p>'+result.rest[i].name+'<br>'+result.rest[i].access.station+'</p></div></a></li>');
+            thumbnail.append('<li><a href="shop.html?shopName='+result.rest[i].name+'&url='+result.rest[i].url+'&area='+result.rest[i].code.areaname_s+'&shopImg=assets/img/result/noImage.png"><div class="shopImg"><img src=assets/img/result/noImage.png class="thumb" alt="img"></div><div class="shopName"><p>'+result.rest[i].name+'<br>'+result.rest[i].access.station+'</p></div></a></li>');
         }     
     };
 
