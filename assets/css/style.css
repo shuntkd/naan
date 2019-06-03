@@ -57,14 +57,26 @@ header a:hover{
 	color:  #707070;
 }
 
-/* overlay設定
+/* js-modal設定
    =================================================================== */
-.overlay {
+.js-modal {
 	display:none;
+	position: fixed;
+	top:0;
+	left:0;
 	width: 100%;
 	height: 100%;
-	background: white;
-	text-align:center;
+	background: rgba(0,0,0,0.45);
+	z-index: 5;
+}
+
+.js-window {
+	position: fixed;
+	top: 10%;
+	left: 25%;
+	width: 50%;
+	display:none;
+	background: #FFFFFF;
 	z-index: 5;
 }
 
@@ -635,24 +647,26 @@ header a:hover{
 	color: #FFFFFF;
 	text-decoration: none;
 	width: 100%;
-	text-align: center;
 }
 
 .btn a:hover{
 	color: #FFFFFF;
 }
 
-.overlay > .btn{
-	top:40%;
-	background-color:#00acee;
-
+.js-gbtn {
+	position: relative;
+	margin: 40px auto;
+	background-image: url(../img/top/btn_google_signin_dark_normal_web.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 191px;
+	height: 46px;
 }
 
-
-.overlay > .btn:hover{
-	background-color:#2bc4ff;
-
+.js-gbtn:hover {
+	background-image: url(../img/top/btn_google_signin_dark_pressed_web.png);
 }
+
 
 /* comment 設定
    =================================================================== */
